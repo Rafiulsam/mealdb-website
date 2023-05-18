@@ -1,16 +1,16 @@
 let displayCount = 6
 let allMealsDisplayed = false
 
-const defaultLoadMeals = () => {
-  const url = `https://www.themealdb.com/api/json/v1/1/search.php?s`
-  fetch(url)
-    .then(res => res.json())
-    .then(data => {
-      displayMeals(data.meals.slice(0, displayCount))
+// const defaultLoadMeals = () => {
+//   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s`
+//   fetch(url)
+//     .then(res => res.json())
+//     .then(data => {
+//       displayMeals(data.meals.slice(0, displayCount))
      
-    })
+//     })
     
-}
+// }
 
 
 const loadMeals = (searchText) => {
@@ -22,10 +22,8 @@ const loadMeals = (searchText) => {
       displayMeals(data.meals.slice(0, displayCount))
     }
       )
-     
-
-}
-
+ }
+loadMeals('')
 
 const showAllMeals = ()=> {
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s`;
@@ -90,4 +88,3 @@ const searchMeals = () => {
   }
 
 }
-defaultLoadMeals()
